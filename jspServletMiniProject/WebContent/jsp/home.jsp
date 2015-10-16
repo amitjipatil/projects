@@ -1,5 +1,6 @@
 <%@page import="in.hybridsoft.facebook.dao.GetData" %>
 <%@page import="java.sql.ResultSet" %>
+<%@page import="javax.servlet.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,7 +10,14 @@
 <title>home</title>
 </head>
 <body>
+<%! RequestDispatcher rd; %>
+<%
 
+if(session.getAttribute("name")==null)
+{ rd=request.getRequestDispatcher("../jsp/index.jsp");
+ rd.forward(request, response);
+ }
+ %>
 
 	<%-- <%@ include file="../common/header.jsp" %> --%>
 	<jsp:include page="../common/header.jsp"></jsp:include>

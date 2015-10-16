@@ -45,9 +45,10 @@
 
 	
 	<div class="indeximg">
-     <img  alt="India flag" src="./images/India.jpg" width="450" height="500">	
+     <img  alt="India flag" src="<%=getServletContext().getContextPath()
+					+ "/images/India.jpg"%>" width="450" height="500">	
 	</div>
-	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br>
 	<jsp:include page="../common/footer.jsp"></jsp:include>
 </body>
 </html>

@@ -7,6 +7,15 @@
 <title>Change email</title>
 </head>
 <body>
+<%! RequestDispatcher rd; %>
+<%
+
+if(session.getAttribute("name")==null)
+{ rd=request.getRequestDispatcher("../jsp/index.jsp");
+ rd.forward(request, response);
+ }
+ %>
+
 <jsp:include page="../common/header.jsp"></jsp:include>
 <br><br><br>
 
