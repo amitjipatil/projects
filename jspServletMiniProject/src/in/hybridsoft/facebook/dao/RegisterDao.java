@@ -6,6 +6,5 @@ import java.util.ArrayList;
 
 public interface RegisterDao {
 	public boolean save(Register r);
-	
 
 }
