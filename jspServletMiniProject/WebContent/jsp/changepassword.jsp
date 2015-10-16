@@ -7,15 +7,12 @@
 <title>Change password</title>
 <script type="text/javascript">
 function validateForm() {
-alert("x");
+
     var x = document.myForm.currentpass.value;
-    var y = document.myForm.newtpass.value;
+    var y = document.myForm.newpass.value;
     var z = document.myForm.confirmpass.value;
-   /*   var y = document.forms["myForm"]["newpass"].value;
-      var z = document.forms["myForm"]["confirmpas"].value; */
-      alert(y);
-      alert(z);
-    /* if (x == null || x == "") {
+     
+     if (x == null || x == "") {
         alert(" enter current password");
         return false;
     }
@@ -33,7 +30,7 @@ alert("x");
     if (y!=z) {
         alert(" new password and confm password shuld be match");
         return false;
-    } */
+    } 
     
 }
 </script>
