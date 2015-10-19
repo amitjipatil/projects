@@ -40,4 +40,23 @@ public class GetData {
 		}
     	return rs;
     }
+    
+    static public ResultSet selectEmail(int id)
+    {
+    	System.out.println("id="+id);
+    	String qry2 = "select * from emaildetails where uid="+id;
+    	Connection con = MakeConnection.getConnection();
+    	try {
+			Statement st = con.createStatement();
+			rs = st.executeQuery(qry2);
+			// System.out.println(rs.next());
+			
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	return rs;
+
+    }
+    
 }

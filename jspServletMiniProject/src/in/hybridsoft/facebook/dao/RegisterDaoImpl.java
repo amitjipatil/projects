@@ -13,7 +13,7 @@ public class RegisterDaoImpl implements RegisterDao {
 	public boolean save(Register register) {
 
 		try {
-
+               // String qry1="insert into emaildetails ()values()";
 			String qry = "insert into register(fname,lname,emailid,username,password,mobileno,gender) values('"
 					+ register.getFname()
 					+ "','"

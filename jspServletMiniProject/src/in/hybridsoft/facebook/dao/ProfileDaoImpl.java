@@ -19,42 +19,22 @@ public class ProfileDaoImpl implements ProfileDao {
 	@Override
 	public boolean save(Profile profile) {
 		try {
-			regid = profile.getRegid();
-			image_url = profile.getImage_url();
-			hobby = profile.getHobby();
-			intrest = profile.getIntrest();
-			address = profile.getAddress();
-			pincode = profile.getPincode();
-			secondary_email = profile.getSecondary_email();
-			/*String qry = "insert into profile(regid,image_url,hobby,intrest,address,pincode,secondary_email) values('"
-					+ regid
-					+ "','"
-					+ image_url
-					+ "','"
-					+ hobby
-					+ "','"
-					+ intrest
-					+ "','"
-					+ address
-					+ "','"
-					+ pincode
-					+ "','"
-					+ secondary_email + "')on duplicate key update image_url=values("+image_url+")";
-			*/
+			
+			
 			String qry = "insert into profile(regid,image_url,hobby,intrest,address,pincode,secondary_email) values('"
 					+ profile.getRegid()
 					+ "','"
-					+ image_url
+					+ profile.getImage_url()
 					+ "','"
-					+ hobby
+					+ profile.getHobby()
 					+ "','"
-					+ intrest
+					+ profile.getIntrest()
 					+ "','"
-					+ address
+					+ profile.getAddress()
 					+ "','"
-					+ pincode
+					+ profile.getPincode()
 					+ "','"
-					+ secondary_email + "')";
+					+ profile.getSecondary_email() + "')";
 			
 			Connection con = MakeConnection.getConnection();
 			Statement st = con.createStatement();

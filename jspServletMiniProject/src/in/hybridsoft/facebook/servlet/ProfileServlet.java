@@ -1,11 +1,9 @@
 package in.hybridsoft.facebook.servlet;
+
 import in.hybridsoft.facebook.model.Profile;
 import in.hybridsoft.facebook.service.ProfileService;
 import in.hybridsoft.facebook.service.ProfileServiceImpl;
-
 import java.io.IOException;
-
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 public class ProfileServlet extends HttpServlet{
@@ -14,7 +12,9 @@ public class ProfileServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 	res.setContentType("text/html");
-	
+	HttpSession session=req.getSession(false);
+	session.getAttribute("name");
+	session.getAttribute("password");
 	
 	int id=Integer.parseInt(req.getParameter("id"));
 	String imgfile=req.getParameter("imgfile");

@@ -46,6 +46,16 @@
     <url-pattern>/changepass</url-pattern>  
     </servlet-mapping> 
     
+    <servlet>
+    <servlet-name>del</servlet-name>
+	<servlet-class>in.hybridsoft.facebook.servlet.DeleteEmailServlet</servlet-class>
+	</servlet> 
+    <servlet-mapping>
+    <servlet-name>del</servlet-name>
+    <url-pattern>/deleteemail</url-pattern>
+    </servlet-mapping>
+    
+    
 	<welcome-file-list>
 		<welcome-file>jsp/index.jsp</welcome-file>
 	</welcome-file-list>
