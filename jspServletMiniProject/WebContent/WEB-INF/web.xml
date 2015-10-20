@@ -55,6 +55,17 @@
     <url-pattern>/deleteemail</url-pattern>
     </servlet-mapping>
     
+     
+     <servlet>
+    <servlet-name>mms</servlet-name>
+	<servlet-class>in.hybridsoft.facebook.servlet.AddNewEmailServlet</servlet-class>
+	</servlet> 
+	
+    <servlet-mapping>
+    <servlet-name>mms</servlet-name>
+    <url-pattern>/savemail</url-pattern>
+    </servlet-mapping>
+    
     
 	<welcome-file-list>
 		<welcome-file>jsp/index.jsp</welcome-file>

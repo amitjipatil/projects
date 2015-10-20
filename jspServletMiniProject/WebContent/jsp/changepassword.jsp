@@ -5,7 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Change password</title>
+
 <script type="text/javascript">
+
+$(document).ready(
+function (){
+$("#BTN")
+}
+);
+
 	function validateForm() {
 
 		var x = document.myForm.currentpass.value;
@@ -60,7 +68,7 @@ if(session.getAttribute("name")==null)
 		current password:<input type="text" name="currentpass"><br>
 		New Password:<input type="text" name="newpass"><br>
 		confirm password:<input type="text" name="confirmpass"><br>
-		<input type="submit" value="change pwd"
+		<input type="submit"  value="change pwd"
 			onclick="return validateForm()">
 	</form>
 	<br>

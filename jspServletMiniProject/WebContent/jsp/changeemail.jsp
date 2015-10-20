@@ -6,10 +6,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script type="text/javascript" src="<%=getServletContext().getContextPath() + "/resources/jquerymin.js"%>"></script>
+
 <script type="text/javascript">
-function deleteemail(th)
- {
- }
+
+
+
+
+
+$(document).ready(
+function (){
+$("#BTN").click(function(){
+$("#BTN").after("<input type='text' id='email' ><input type='button' id='savemail' value='saveEmail' >");
+$( "#savemail" ).click(function() {
+  alert( "save email calll" );
+  var m=document.getElementById('email').value;
+  var uid=document.getElementById('uid').value;
+  alert(m);
+  
+  window.location.href="<%=getServletContext().getContextPath()%>"+"/savemail?email="+m+"&uid="+uid;
+  alert(window.location.href);
+  
+});
+})
+}
+);
 
 
 </script>
@@ -45,8 +66,9 @@ if(session.getAttribute("name")==null)
 
 <table border="1">
 <tr>
-<th>PRIMARY</th><th>EMAIL-ID</th><th>DELETE</th>
+<th>PRIMARY</th><th>EMAIL-ID</th><th>DELETE</th><th>PRIMARY</th>
 </tr>
+<%!int i=0,j=0; %>
 <%while(resultset1.next()){%>
 		<tr>
 			<td>
@@ -60,17 +82,22 @@ if(session.getAttribute("name")==null)
 				<%out.print(resultset1.getString(2));%>
 			</td>
 			<td>
-			<%!int i=0; %>
+			<%j=resultset1.getInt(4); %>
 			<%i=resultset1.getInt(1); %>
 				<a href="<%=getServletContext().getContextPath()+"/deleteemail?id="+i%>">delete</a>
-				<a href="/ggg"  name="" ></a>
+				
+			</td>
+			<td>
+			<a href="<%=getServletContext().getContextPath()+"/primary?id="+i%>">primary</a>
 			</td>
 			
 				</tr>
 		<% } %> 
 </table>
-<input type="submit" value="addNew">
+<input type="button" id="BTN" value="addNew">
+<input type="hidden" id="uid" value="<%=j%>" >
 </form>
+
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
 <jsp:include page="../common/footer.jsp"></jsp:include>
