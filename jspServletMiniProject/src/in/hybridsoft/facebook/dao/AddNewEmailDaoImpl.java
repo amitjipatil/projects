@@ -6,11 +6,11 @@ import java.sql.Statement;
 import in.hybridsoft.facebook.util.MakeConnection;
 
 public class AddNewEmailDaoImpl implements AddNewEmailDao {
-
+	Connection con=MakeConnection.getConnection();
+	
 	@Override
 	public boolean newEmail(String email, int uid) {
-		Connection con=MakeConnection.getConnection();
-		System.out.println("8888888");
+			System.out.println("8888888");
 		String qry="insert into emaildetails (email,status,uid) values('"+email+"','yes',"+uid+")";
 		try{
 		Statement st=con.createStatement();
@@ -22,6 +22,31 @@ public class AddNewEmailDaoImpl implements AddNewEmailDao {
 		}
 		catch(Exception e)
 		{}
+		return false;
+	}
+
+	public boolean makePrimary(int id, int uid) {
+
+		String qry="update emaildetails set status='yes' where id="+id;
+		String qry1="update emaildetails set status='no' where id not in("+id+") and uid="+uid+" and status='no'";
+	try{
+		Statement st=con.createStatement();
+		int n=st.executeUpdate(qry);
+		int m=st.executeUpdate(qry1);
+		
+		if(n>0)
+		{
+			if(m>0)
+			{
+				
+				return true;
+				
+			}
+			
+		}
+	}
+	catch(Exception e)
+	{}
 		return false;
 	}
 

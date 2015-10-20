@@ -66,9 +66,11 @@ if(session.getAttribute("name")==null)
 
 <table border="1">
 <tr>
-<th>PRIMARY</th><th>EMAIL-ID</th><th>DELETE</th><th>PRIMARY</th>
+<th>PRIMARY</th><th>EMAIL-ID</th><th>DELETE</th><th>Make PRIMARY</th>
 </tr>
-<%!int i=0,j=0; %>
+<%!int i=0,j=0;
+String email1=null;
+ %>
 <%while(resultset1.next()){%>
 		<tr>
 			<td>
@@ -84,11 +86,12 @@ if(session.getAttribute("name")==null)
 			<td>
 			<%j=resultset1.getInt(4); %>
 			<%i=resultset1.getInt(1); %>
+			
 				<a href="<%=getServletContext().getContextPath()+"/deleteemail?id="+i%>">delete</a>
 				
 			</td>
 			<td>
-			<a href="<%=getServletContext().getContextPath()+"/primary?id="+i%>">primary</a>
+			<a href="<%=getServletContext().getContextPath()+"/primary?id="+i+"&uid="+j%>">primary</a>
 			</td>
 			
 				</tr>

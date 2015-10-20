@@ -60,10 +60,19 @@
     <servlet-name>mms</servlet-name>
 	<servlet-class>in.hybridsoft.facebook.servlet.AddNewEmailServlet</servlet-class>
 	</servlet> 
-	
     <servlet-mapping>
     <servlet-name>mms</servlet-name>
     <url-pattern>/savemail</url-pattern>
+    </servlet-mapping>
+    
+    
+     <servlet>
+    <servlet-name>prim</servlet-name>
+	<servlet-class>in.hybridsoft.facebook.servlet.PrimaryServlet</servlet-class>
+	</servlet> 
+    <servlet-mapping>
+    <servlet-name>prim</servlet-name>
+    <url-pattern>/primary</url-pattern>
     </servlet-mapping>
     
     

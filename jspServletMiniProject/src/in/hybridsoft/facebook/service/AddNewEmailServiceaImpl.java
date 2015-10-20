@@ -11,4 +11,10 @@ public class AddNewEmailServiceaImpl implements AddNewEmailService {
 		return new AddNewEmailDaoImpl().newEmail(email,uid);
 	}
 
+	public boolean makePrimary(int id, int uid) {
+	
+		
+		return new AddNewEmailDaoImpl().makePrimary(id,uid);
+	}
+
 }
