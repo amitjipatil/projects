@@ -1,6 +1,16 @@
 package in.hybridsoft.facebook.model;
 
 public class Profile {
+	
+	private int myarr[]=new int[4];
+	
+	public int[] getMyarr() {
+		return myarr;
+	}
+
+	public void setMyarr(int[] myarr) {
+		this.myarr = myarr;
+	}
 	private int regid;
 	private String image_url;
 	private String hobby;

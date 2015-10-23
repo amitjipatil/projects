@@ -43,7 +43,7 @@ public class GetData {
     
     static public ResultSet selectEmail(int id)
     {
-    	System.out.println("id="+id);
+    	
     	String qry2 = "select * from emaildetails where uid="+id;
     	Connection con = MakeConnection.getConnection();
     	try {
@@ -59,4 +59,19 @@ public class GetData {
 
     }
     
+    static public ResultSet getProfile(int id)
+    {
+    	String qry="select * from profile where regid="+id;
+    	Connection con=MakeConnection.getConnection();
+    	try{
+    		Statement st=con.createStatement();
+    		rs=st.executeQuery(qry);
+    	}
+    	catch(Exception e)
+    	{
+    		e.printStackTrace();
+    	}
+		return rs;
+    	
+    }
 }

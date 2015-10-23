@@ -11,7 +11,7 @@ public class AddNewEmailDaoImpl implements AddNewEmailDao {
 	@Override
 	public boolean newEmail(String email, int uid) {
 			System.out.println("8888888");
-		String qry="insert into emaildetails (email,status,uid) values('"+email+"','yes',"+uid+")";
+		String qry="insert into emaildetails (email,status,uid) values('"+email+"','no',"+uid+")";
 		try{
 		Statement st=con.createStatement();
 		int n=st.executeUpdate(qry);
@@ -28,7 +28,7 @@ public class AddNewEmailDaoImpl implements AddNewEmailDao {
 	public boolean makePrimary(int id, int uid) {
 
 		String qry="update emaildetails set status='yes' where id="+id;
-		String qry1="update emaildetails set status='no' where id not in("+id+") and uid="+uid+" and status='no'";
+		String qry1="update emaildetails set status='no' where id not in("+id+") and uid="+uid+" and status='yes'";
 	try{
 		Statement st=con.createStatement();
 		int n=st.executeUpdate(qry);

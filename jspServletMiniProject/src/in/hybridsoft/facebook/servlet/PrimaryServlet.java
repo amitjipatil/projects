@@ -18,12 +18,14 @@ public class PrimaryServlet extends HttpServlet{
 
 	  AddNewEmailServiceaImpl addNewEmailServiceaImpl=new AddNewEmailServiceaImpl();
 	 boolean bool=addNewEmailServiceaImpl.makePrimary(id,uid);
-	 if(bool)
-	 {
+	System.out.println(bool+"---+++++----");
+	 
+		 
+		 System.out.println("-------+++++++--------");
 		 rd=req.getRequestDispatcher("/jsp/changeemail.jsp");
 		 rd.forward(req, res);
 		 
-	 }
+	 
 	 
 	}
 	

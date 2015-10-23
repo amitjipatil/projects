@@ -19,8 +19,7 @@ function (){
 $("#BTN").click(function(){
 $("#BTN").after("<input type='text' id='email' ><input type='button' id='savemail' value='saveEmail' >");
 $( "#savemail" ).click(function() {
-  alert( "save email calll" );
-  var m=document.getElementById('email').value;
+   var m=document.getElementById('email').value;
   var uid=document.getElementById('uid').value;
   alert(m);
   

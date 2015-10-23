@@ -65,9 +65,9 @@ if(session.getAttribute("name")==null)
 	<form name="myForm"
 		action="<%=getServletContext().getContextPath() + "/changepass"%>"
 		method="post">
-		current password:<input type="text" name="currentpass"><br>
-		New Password:<input type="text" name="newpass"><br>
-		confirm password:<input type="text" name="confirmpass"><br>
+		current password:<input type="password" name="currentpass"><br>
+		New Password:<input type="password" name="newpass"><br>
+		confirm password:<input type="password" name="confirmpass"><br>
 		<input type="submit"  value="change pwd"
 			onclick="return validateForm()">
 	</form>

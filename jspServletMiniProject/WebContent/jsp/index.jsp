@@ -33,9 +33,9 @@
 	
 	<form action="<%=getServletContext().getContextPath() + "/login"%>"
 		method="post" name="myForm" >
-		user name: <input type="text" name="name" /><br>
-		<br> password: <input type="text" name="password" /><br>
-		<br> <input type="submit" value="Log-in" onclick="return validateForm()">
+		user name: <input type="text" name="name" required/><br>
+		<br> password: <input type="password" name="password" required /><br>
+		<br> <input type="submit" value="Log-in" >
 		</form>
 		
 		<br>
