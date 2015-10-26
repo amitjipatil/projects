@@ -11,8 +11,6 @@ import javax.servlet.*;
 public class UploadData extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)throws ServletException, IOException
 	{
-		//System.out.println("--------------1------------");
-		PrintWriter pw=res.getWriter();
 		try
 		{
 			UploadBean upb=new UploadBean();

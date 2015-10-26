@@ -8,6 +8,7 @@ public class Register {
 	private String mailid;
 	private String password;
 	private String sex;
+	private int id;
 	public Register(String name, String mob, String fname, String lname,
 			String mailid, String password, String sex) {
 		super();
@@ -22,6 +23,13 @@ public class Register {
 	public Register()
 	{}
 	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

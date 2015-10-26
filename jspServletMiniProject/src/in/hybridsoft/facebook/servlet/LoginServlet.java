@@ -12,18 +12,19 @@ public class LoginServlet extends HttpServlet{
 		RequestDispatcher rd;
 		res.setContentType("text/html");
 		HttpSession ses;
+		int i=1;
 	   String name= req.getParameter("name");
 	   String pwd=(String) req.getParameter("password");
 	   LoginServiceImpl ls=new LoginServiceImpl();
 	   System.out.println(name+" "+pwd);
-	//  boolean bool= 
-	 // System.out.println(bool+"a");
-	  if(ls.validateLogin(name,pwd))
+		  if(ls.validateLogin(name,pwd))
 	  {
 		  ses=req.getSession();
 	  ses.setAttribute("name",name);
+	   
 	  ses.setAttribute("password", pwd);
-	        rd=req.getRequestDispatcher("jsp/home.jsp");
+	  req.setAttribute("pageindex",i);
+	        rd=req.getRequestDispatcher("/getpagination");
 		rd.forward(req, res);
 		return;
 	  }

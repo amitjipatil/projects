@@ -30,11 +30,12 @@ function validateForm() {
 
 <br>
 <form  name="myForm" action="../register" method="post">
-user name:<input type="text" name="name" required/><br><br>
-mobile mo:<input type="text" name="mobno"required/><br><br>
+user name:<input type="t
+ext" name="name" required/><br><br>
+mobile mo:<input type="number" name="mobno"required/><br><br>
 first name:<input type="text" name="fname" required/><br><br>
 last name:&nbsp;&nbsp;&nbsp;<input type="text" name="lname" required/><br><br>
-mail id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="mailid" required/><br><br>
+mail id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="mailid" required/><br><br>
 password:&nbsp;<input type="password" name="password" required/><br><br>
 cnfm paswd:<input type="password" name="confirm" required/><br><br>
 Gender:  <input type="radio" name="sex" value="male" checked>Male
