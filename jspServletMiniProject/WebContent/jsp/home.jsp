@@ -90,13 +90,15 @@
 		<table>
 			<tr>
 				<td>
-				<%-- <%int pindex= %> --%>
-				<a
+					<%-- <%int pindex= %> --%> <a
 					href="<%=getServletContext().getContextPath()
-					+ "/getpagination?pageindex="+request.getAttribute("previus")%>">Previous</a></td>
+					+ "/getpagination?pageindex="
+					+ request.getAttribute("previus")%>">Previous</a>
+				</td>
 				<td><a
 					href="<%=getServletContext().getContextPath()
-					+ "/getpagination?pageindex="+request.getAttribute("next")%>">Next</a></td>
+					+ "/getpagination?pageindex="
+					+ request.getAttribute("next")%>">Next</a></td>
 			</tr>
 		</table>
 	</center>
