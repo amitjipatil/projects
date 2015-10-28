@@ -12,7 +12,7 @@ public class LoginServlet extends HttpServlet{
 		RequestDispatcher rd;
 		res.setContentType("text/html");
 		HttpSession ses;
-		int i=1;
+		//int i=1;
 	   String name= req.getParameter("name");
 	   String pwd=(String) req.getParameter("password");
 	   LoginServiceImpl ls=new LoginServiceImpl();
@@ -23,8 +23,8 @@ public class LoginServlet extends HttpServlet{
 	  ses.setAttribute("name",name);
 	   
 	  ses.setAttribute("password", pwd);
-	  req.setAttribute("pageindex",i);
-	        rd=req.getRequestDispatcher("/getpagination");
+	  //req.setAttribute("pageindex",i);
+	        rd=req.getRequestDispatcher("/getpagination?pageindex=1");
 		rd.forward(req, res);
 		return;
 	  }

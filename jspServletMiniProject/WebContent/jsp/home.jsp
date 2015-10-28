@@ -89,7 +89,9 @@
 	<center>
 		<table>
 			<tr>
-				<td><a
+				<td>
+				<%-- <%int pindex= %> --%>
+				<a
 					href="<%=getServletContext().getContextPath()
 					+ "/getpagination?pageindex="+request.getAttribute("previus")%>">Previous</a></td>
 				<td><a

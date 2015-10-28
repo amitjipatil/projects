@@ -10,20 +10,21 @@ import javax.servlet.http.*;
 public class PaginationServlet extends HttpServlet{
 	RequestDispatcher rd;
 	int index;
+	int previus;
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 		System.out.println("vvvvvvvvvmml");
-	      index=(int) req.getAttribute("pageindex");
-	    		  
-	      System.out.println("*******pageIndex="+index);
-	      if(index==0)
-	      {
+		  
+	    
 		     index=Integer.parseInt(req.getParameter("pageindex"));
-	      }
-			System.out.println(index);
-			int previus=index;
-			int next=index+1;
+	      
+		     System.out.println("*******pageIndex="+index);
+			if(index>1)
+			{
+				previus=index-1;
+			}
+		     int next=index+1;
 			List<Register> list=GetData.selectData(index);
 			
 			req.setAttribute("listdata",list);
