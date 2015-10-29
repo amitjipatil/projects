@@ -12,7 +12,7 @@
 <div class="navigation">
 
        <ul id="nav_links">
-    		<li class="hom"><a href="<%=getServletContext().getContextPath()+"/jsp/home.jsp"%>">HOME</a></li>
+    		<li class="hom"><a href="<%=getServletContext().getContextPath()+"/getpagination?pageindex=1"%>">HOME</a></li>
     		<li class="campus">ABOUT US
     		<ul class="sub_nav">
 		
