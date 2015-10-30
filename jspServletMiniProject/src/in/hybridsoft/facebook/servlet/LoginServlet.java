@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet {
 		res.setContentType("text/html");
 		HttpSession ses;
 		// int i=1;
-		String name = req.getParameter("name");
+		String name = req.getParameter("username");
 		String pwd = (String) req.getParameter("password");
 		LoginServiceImpl ls = new LoginServiceImpl();
 		System.out.println(name + " " + pwd);
@@ -25,12 +25,14 @@ public class LoginServlet extends HttpServlet {
 
 			ses.setAttribute("password", pwd);
 			// req.setAttribute("pageindex",i);
-			rd = req.getRequestDispatcher("/getpagination?pageindex=1");
-			rd.forward(req, res);
+			/*rd = req.getRequestDispatcher("/getpagination?pageindex=1");
+			rd.forward(req, res);*/
+			res.getWriter().write("success");
 			return;
 		} else
-			rd = req.getRequestDispatcher("jsp/loginfailed.jsp");
-		rd.forward(req, res);
+			/*rd = req.getRequestDispatcher("jsp/loginfailed.jsp");
+		rd.forward(req, res);*/
+			res.getWriter().write("failure");
 		return;
 
 	}

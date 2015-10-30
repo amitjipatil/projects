@@ -6,39 +6,39 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Index page</title>
-<script type="text/javascript">
-	function validateForm() {
+<script type="text/javascript" src="./resources/jquerymin.js"></script> 
+<script type="text/javascript" src="./resources/ajax1.js"></script>
 
-		var x = document.myForm.name.value;
-		var y = document.myForm.password.value;
-		
-		if (x == null || x == "") {
-			alert(" enter name");
-			return false;
-		}
-
-		if (y == null || y == "") {
-			alert(" enter password");
-			return false;
-		}
-
-
-	}
-</script>
 
 </head> 
 <body >
 <jsp:include page="../common/loginHeader.jsp"></jsp:include>
+<br><br><br>
+<div id="success" style="width: 50%;text-align: center;display: none;font-weight: bold; color:black;">
+<center><h3>Login Success...!</h3></center>
+</div>
+
+<div id="failure" style="width: 50%;text-align: center;display: none;font-weight: bold;color:black;">
+<center><h3>Login Failure...!</h3></center>
+</div>
+
 <br><br><br><br>
+
+
+
+
+
 	<h1>Login:</h1>
 	
-	<form action="<%=getServletContext().getContextPath() + "/login"%>"
-		method="post" name="myForm" >
-		user name: <input type="text" name="name" required/><br>
-		<br> password: <input type="password" name="password" required /><br>
-		<br> <input type="submit" value="Log-in" >
-		</form>
+	
+		<div>
 		
+		
+		user name: <input type="text" id="name" required/><br>
+		<br> password: <input type="password" id="password" name="password" required /><br>
+		<br> <input type="button" id="log" value="Log-in" >
+	
+		</div>
 		<br>
 		<br> <a
 			href="<%=getServletContext().getContextPath()
