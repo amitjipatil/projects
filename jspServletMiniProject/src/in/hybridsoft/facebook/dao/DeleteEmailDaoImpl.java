@@ -11,7 +11,7 @@ public class DeleteEmailDaoImpl implements DeleteEmailDao {
 	@Override
 	public boolean deleteEmail(int id) {
 		try
-		{
+		{ 
 			String qry="delete from emaildetails where id="+id;
 		con=MakeConnection.getConnection();
 		Statement st=con.createStatement();
