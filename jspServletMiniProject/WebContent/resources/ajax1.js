@@ -1,5 +1,5 @@
 /**
- * 
+ * @author amit
  */
 $(document).ready(function(){
 	$("#log").click(function(){

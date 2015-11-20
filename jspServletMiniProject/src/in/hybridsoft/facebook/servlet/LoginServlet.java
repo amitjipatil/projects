@@ -2,9 +2,7 @@ package in.hybridsoft.facebook.servlet;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
-
 import in.hybridsoft.facebook.service.*;
-
 import java.io.*;
 
 public class LoginServlet extends HttpServlet {
@@ -14,7 +12,7 @@ public class LoginServlet extends HttpServlet {
 		RequestDispatcher rd;
 		res.setContentType("text/html");
 		HttpSession ses;
-		// int i=1;
+		
 		String name = req.getParameter("username");
 		String pwd = (String) req.getParameter("password");
 		LoginServiceImpl ls = new LoginServiceImpl();

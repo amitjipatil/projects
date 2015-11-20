@@ -22,7 +22,7 @@ public class PaginationServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		System.out.println("vvvvvvvvvmml");
+	
 
 		index = Integer.parseInt(req.getParameter("pageindex"));
 
