@@ -9,10 +9,10 @@ public class MyControler {
 	public ModelAndView printWelcome()
 	{
 		String message="hello amit....!";
-		
+		System.out.println("amit controler");
 		ModelAndView model = new ModelAndView("welcome");
 		model.addObject("msg", message);
 		return model;
 		}
-
+ 
 }
