@@ -3,6 +3,7 @@ public class Tewst {
 	public static void main(String[] args) {
 		
 	try{
+		
 		 int b;
 		  b=10/0;
 	 try{
