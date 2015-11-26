@@ -13,6 +13,7 @@ public class MyControler {
 		ModelAndView model = new ModelAndView("welcome");
 		model.addObject("msg", message);
 		return model;
+		
 		}
  
 }
