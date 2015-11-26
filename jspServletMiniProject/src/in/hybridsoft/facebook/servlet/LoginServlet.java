@@ -14,9 +14,9 @@ public class LoginServlet extends HttpServlet {
 		HttpSession ses;
 		
 		String name = req.getParameter("username");
-		String pwd = (String) req.getParameter("password");
+		String pwd = req.getParameter("password");
 		LoginServiceImpl ls = new LoginServiceImpl();
-		System.out.println(name + " " + pwd);
+		System.out.println(name + "  " + pwd);
 		if (ls.validateLogin(name, pwd)) {
 			ses = req.getSession();
 			ses.setAttribute("name", name);
