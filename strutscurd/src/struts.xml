@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="abc" extends="struts-default">
+<action name="save" class="in.hybridsoft.app.action.SaveAction" method="saveData">
+<result name="success">jsp/display.jsp</result>
+</action>
+<action name="display" class="in.hybridsoft.app.action.SaveAction" method="getData">
+<result name="success">jsp/display.jsp</result>
+</action>
+<action name="update" class="in.hybridsoft.app.action.SaveAction" method="updateData">
+<result name="success">jsp/display.jsp</result>
+</action>
+<action name="delete" class="in.hybridsoft.app.action.SaveAction" method="deleteData">
+<result name="success">index.jsp</result>
+</action>
+
+</package>
+
+
+</struts>
