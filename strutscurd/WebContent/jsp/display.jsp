@@ -7,11 +7,12 @@
 <title>display</title>
 <script type="text/javascript" src="./resources/jquerymin.js"></script>
 <script type="text/javascript" src="./resources/ajax1.js"></script>
+<script type="text/javascript" src="./resources/bootstrap.js"></script>
 
 </head>
 <body>
 
-<table id="tbl_data" border="1">
+<table id="tbl_data" border="1" class="table table-striped">
 
 <tr>
 <th>emp no</th><th>name</th><th>salary</th><th>update</th><th>delete</th>
