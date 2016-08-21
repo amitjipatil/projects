@@ -27,7 +27,7 @@ public class Mycontroler1 {
 		
 		ModelAndView andView=new ModelAndView("display");
 		//Integer a=new Integer(pageindex);
-		andView.addObject("pageindex", page);
+		andView.addObject("elist",l);
 		return andView;
 		
 	}
