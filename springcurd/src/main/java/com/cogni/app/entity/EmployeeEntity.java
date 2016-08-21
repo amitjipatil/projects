@@ -3,7 +3,7 @@ import org.hibernate.*;
 import javax.persistence.*;
 @Entity
 @Table(name="employee")
-public class EmoloyeeEntity {
+public class EmployeeEntity {
 	@Id
 	 @Column(name = "eid")
 	private int eid;

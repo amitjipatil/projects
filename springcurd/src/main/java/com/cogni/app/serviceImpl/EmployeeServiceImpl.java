@@ -9,6 +9,7 @@ import com.cogni.app.service.EmployeeService;
 public class EmployeeServiceImpl implements EmployeeService {
 
 	public List getData() {
+		System.out.println("come here3");
 		EmployeeDao employeeDao=new EmployeeDaoImpl();
 		List l=employeeDao.getData();
 		return l;

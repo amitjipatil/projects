@@ -1,5 +1,7 @@
 package com.cogni.app.spring;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +22,8 @@ public class Mycontroler1 {
 		System.out.println("*******"+page);
 		
 		EmployeeService employeeService=new EmployeeServiceImpl();
-		employeeService.getData();
+		List l=employeeService.getData();
+		System.out.println("=====");
 		
 		ModelAndView andView=new ModelAndView("display");
 		//Integer a=new Integer(pageindex);
