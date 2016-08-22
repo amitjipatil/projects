@@ -1,28 +1,33 @@
 package com.cogni.app.daoImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javassist.bytecode.Descriptor.Iterator;
+
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.stereotype.Repository;
 
 import com.cogni.app.dao.EmployeeDao;
+import com.cogni.app.entity.EmployeeEntity;
 import com.cogni.app.model.Employee;
 import com.cogni.app.util.GetConnection;
-
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 
+	
 	public List getData() {
 		System.out.println("come here");
-		if(GetConnection.getSession()==null)
-		{
-			System.out.println("session null");
-		}
+		
 	   Session ses=GetConnection.getSession();
-	   //ses.get(Employee.class, pageIndex);
-	   Criteria cr=ses.createCriteria(Employee.class);
-	   List list=cr.list();
-	   System.out.println("come here1");
-	   return list;
+	   String hql = "FROM EmployeeEntity";
+	   Query query = ses.createQuery(hql);
+	   List <EmployeeEntity> list1=query.list();
+	   
+	   
+	   return list1;
 	}
 
 }
