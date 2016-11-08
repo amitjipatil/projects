@@ -16,7 +16,10 @@ import com.opencsv.bean.CsvToBean;
 public class ImportCSV {
 
 	public static void main(String[] args) {
-		//main
+		// http://www.java2s.com/Code/Jar/c/Downloadcommonslang3301jar.htm
+
+// https://sourceforge.net/projects/opencsv/?source=typ_redirect
+
 		CSVReader csvReader = null;
 		CSVWriter csvWriter = null;
 		try
