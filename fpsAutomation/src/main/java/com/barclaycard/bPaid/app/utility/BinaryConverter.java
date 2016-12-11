@@ -1,7 +1,7 @@
 package com.barclaycard.bPaid.app.utility;
 
 public class BinaryConverter {
-	public String hexToBin(String hex)
+	public static String hexToBin(String hex)
 	{ 
 		String bin = "";
     String binFragment = "";
