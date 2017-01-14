@@ -1,7 +1,5 @@
 package com.cogni.app.daoImpl;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -9,10 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.cogni.app.bean.StudentForm;
 import com.cogni.app.dao.RegisterDao;
 import com.cogni.app.domain.Student;
-import com.cogni.app.dto.StudentDto;
+
 
 public class RegisterDaoImpl implements RegisterDao {
 
@@ -57,5 +54,10 @@ public class RegisterDaoImpl implements RegisterDao {
 		return q1.list();
 
 	}
+	
+
+	
+
+	
 
 }

@@ -27,7 +27,7 @@
 			<version>3.0.5.RELEASE</version>
 			<type>jar</type>
 			<scope>compile</scope>
-			<exclusions>
+			<exclusions> 
 				<exclusion>
 					<artifactId>commons-logging</artifactId>
 					<groupId>commons-logging</groupId>

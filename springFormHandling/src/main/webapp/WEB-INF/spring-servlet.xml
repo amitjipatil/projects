@@ -28,6 +28,8 @@
 	<bean id="registerservice" class="com.cogni.app.serviceImpl.RegisterServiceImpl" />
 	<bean id="registerdao" class="com.cogni.app.daoImpl.RegisterDaoImpl" />
 
+	<bean id="deleteService" class="com.cogni.app.serviceImpl.DeleteServiceImpl" />
+	<bean id="deleteDao" class="com.cogni.app.daoImpl.DeleteDaoImpl" />
 
 
 

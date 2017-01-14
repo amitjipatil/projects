@@ -27,7 +27,7 @@ public class AddStudent {
 
 	@RequestMapping(value = "/register")
 	public ModelAndView display(ModelMap model) {
-		System.out.println("hiiiiiii...");
+		
 		List list = new ArrayList();
 		list = registerservice.getStudent();
 		model.addAttribute("studentForm", new StudentForm());
