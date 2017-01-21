@@ -30,7 +30,7 @@ public class RegisterDaoImpl implements RegisterDao {
 		try {
 
 			Session session = hibernateSessionFactory.openSession();
-			Integer s = (Integer) session.save(student);
+			session.saveOrUpdate(student);
 			session.beginTransaction().commit();
 			System.out.println("***** Registration done ******");
 		} catch (Exception e) {

@@ -31,10 +31,10 @@
 	<bean id="deleteService" class="com.cogni.app.serviceImpl.DeleteServiceImpl" />
 	<bean id="deleteDao" class="com.cogni.app.daoImpl.DeleteDaoImpl" />
 
-
-
+	<bean id="updateService" class="com.cogni.app.serviceImpl.UpdateServiceImpl" />
+	<bean id="updateDao" class="com.cogni.app.daoImpl.UpdateDaoImpl" />
 	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
 		<property name="driverClassName">
 			<value>com.mysql.jdbc.Driver</value>
 		</property>

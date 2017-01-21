@@ -1,5 +1,6 @@
 package com.cogni.app.bean;
 
+
 public class StudentForm {
 	private int id;
 	private String name;
