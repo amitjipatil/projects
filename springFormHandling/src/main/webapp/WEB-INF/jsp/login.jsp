@@ -27,15 +27,19 @@
 		</h3>
 		<table>
 
-			<form:form commandName="login" id="loginForm" name="loginForm">
+			<form:form modelAttribute="login" commandName="login" id="loginForm" name="loginForm">
 				<tr>
 					<td>UserId *</td>
 					
-					<td><form:input path="userid" class="form-control" required="required" /><br></td>
+					<td><form:input path="userid" class="form-control"  /></td>
+					<td><form:errors class="label label-danger" path="userid"/>
+					<br></td>
 				</tr>
 				<tr>
 					<td>Password *</td>
-					<td><form:input path="password" class="form-control" required="required" /><br></td>
+					<td><form:input path="password" class="form-control" /></td>
+					<td><form:errors class="label label-danger" path="password"/>
+					<br></td>
 				</tr>
 
 				<tr>
