@@ -5,12 +5,12 @@ public class MyString {
 		String s="amit";
 		String ss="amit";
 		System.out.println("hsahcode of s:"+s.hashCode());
-		System.out.println("hsahcode of ss=:"+s.hashCode());//same as s
+		System.out.println("hsahcode of ss=:"+ss.hashCode());//same as s
 
 		s=s.replace('a', 'b');
-		System.out.println("hsahcode of s:"+s.hashCode());
+		System.out.println("hsahcode of s*:"+s.hashCode());
 		System.out.println(s);
-		StringBuffer sb=new StringBuffer("raj");
+		StringBuffer sb=new StringBuffer();
 		System.out.println(sb);
 		System.out.println("hsahcode of sb:"+sb.hashCode());
 		sb.append('a');
