@@ -2,17 +2,22 @@ package multithreading;
 
 public class Mythr extends Thread{
 	Synchronise s;
+
 	Mythr(Synchronise s)
 	{
 		this.s=s;
 	}
 	@Override
 public void run() {
-	//	show();
+		//show();
 s.display();
+
 }
 	synchronized public void show()
 	{
-		System.out.println(Thread.currentThread().getName());
+		for(int i=0;i<5;i++)
+		{
+		System.out.println(Thread.currentThread().getName()+" show method");
+		}
 	}
 }

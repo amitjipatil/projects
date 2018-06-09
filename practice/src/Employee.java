@@ -1,6 +1,7 @@
 
 public class Employee implements Comparable{
 
+	
     int age;
     String name;
     int salary;
