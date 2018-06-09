@@ -16,10 +16,7 @@
 		<h1>Login..</h1>
 	</center></div>
 	 <div class="status alert alert-success" style="display: none"></div>
- 
-
-  
-	
+ 	
 	<br>
 	<center>
 		<h3>

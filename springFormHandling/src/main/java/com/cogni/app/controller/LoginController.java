@@ -37,22 +37,19 @@ public class LoginController {
 		{
 			return new ModelAndView("login");
 		}
-		Student studentForm = new Student();
-		model.addAttribute("studentForm", studentForm);
-		return new ModelAndView("redirect:register");
 		
 		
 		// Student student=new Student();
-/*		if (login.getUserid().equals("asdf")
+		if (login.getUserid().equals("asdf")
 				&& login.getPassword().equals("asdf123")) {
-			Student studentForm = new Student();
+			StudentForm studentForm = new StudentForm();
 			model.addAttribute("studentForm", studentForm);
 			return new ModelAndView("redirect:register");
 		} else {
 			model.addAttribute("ErrorMessage", "Invalid credentials...");
 		}
 		return new ModelAndView("login");
-*/
+
 	}//chechAuth() close
 	
 	@InitBinder("login")
