@@ -1,5 +1,8 @@
 package equalshashcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class EqualsHashcode {
 	public static void main(String[] args) {
 		
@@ -7,22 +10,35 @@ public class EqualsHashcode {
 		Employee e2=new Employee(102, "sam");
 		Employee e3=new Employee(103, "avi");
 		Employee e4=new Employee(104, "sham");
-		Employee x=new Employee(101, "raj");
+		Employee e1duplicate=new Employee(101, "raj");
 		String s=new String("ram");
 		String s1=new String("ram");
 
-		System.out.println("Employee: "+e1.equals(x));// false if equals() not overriden in Employee class
+		System.out.println("Employee: "+e1.equals(e1duplicate));// false if equals() not overriden in Employee class
 		System.out.println("String: "+s.equals(s1));//true because predefined String class implements equals() method
 		System.out.println("String s: "+s.hashCode());
 		System.out.println("String s1: "+s1.hashCode());// 2 different objects of same class (s,s1) of string class will generate same hashcode because it implemented hashcode()
 		System.out.println("Emolpyee e1: "+e1.hashCode());
-		System.out.println("Employee x: "+x.hashCode());//if hashcode() not override then different objects same content (e1,x) of employee have different hashcode
-		//if 2 same class objects having same content and having hashcode() impl. then it will generate same hashcode e1=445533 x=445533
-     // if e1==x is true then e1.equals(x) is always true
-		// if e1==x is false then e1.equals(x) may true or false
-		  //if e1.equals(x) is true then e1==x may true or false
-		//if e1.equals(x) is false then e1==x is always false
-
+		System.out.println("Employee e1duplicate: "+e1duplicate.hashCode());//if hashcode() not override then different objects same content (e1,e1duplicate) of employee have different hashcode
+		//if 2 different objects of same class having same content and having hashcode() impl. then it will generate same hashcode e1=445533 x=445533
+     // if e1==e1duplicate is true then e1.equals(e1duplicate) is always true
+		// if e1==e1duplicate is false then e1.equals(e1duplicate) may true or false
+		  //if e1.equals(e1duplicate) is true then e1==e1duplicate may true or false
+		//if e1.equals(e1duplicate) is false then e1==e1duplicate is always false
+		
+		/*
+		The contract between equals() and hashCode() is:
+			1) If two objects are equal, then they must have the same hash code.
+			2) If two objects have the same hash code, they may or may not be equal.*/
+		
+		Map<Employee, Integer> map=new HashMap<Employee, Integer>();
+		map.put(e1, 10);
+		map.put(e2, 41);
+		map.put(e3, 25);
+//		map.put(e1duplicate, 77);//if Employee class equals method not implemented  e1duplicate will added to hm
+		System.out.println(map);
+		System.out.println(map.get(new Employee(101, "raj")));
+		
 
 
 
