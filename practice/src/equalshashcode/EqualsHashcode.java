@@ -18,7 +18,10 @@ public class EqualsHashcode {
 		System.out.println("Emolpyee e1: "+e1.hashCode());
 		System.out.println("Employee x: "+x.hashCode());//if hashcode() not override then different objects same content (e1,x) of employee have different hashcode
 		//if 2 same class objects having same content and having hashcode() impl. then it will generate same hashcode e1=445533 x=445533
-
+     // if e1==x is true then e1.equals(x) is always true
+		// if e1==x is false then e1.equals(x) may true or false
+		  //if e1.equals(x) is true then e1==x may true or false
+		//if e1.equals(x) is false then e1==x is always false
 
 
 
