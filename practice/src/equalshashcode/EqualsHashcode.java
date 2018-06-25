@@ -20,7 +20,7 @@ public class EqualsHashcode {
 		System.out.println("String s1: "+s1.hashCode());// 2 different objects of same class (s,s1) of string class will generate same hashcode because it implemented hashcode()
 		System.out.println("Emolpyee e1: "+e1.hashCode());
 		System.out.println("Employee e1duplicate: "+e1duplicate.hashCode());//if hashcode() not override then different objects same content (e1,e1duplicate) of employee have different hashcode
-		//if 2 different objects of same class having same content and having hashcode() impl. then it will generate same hashcode e1=445533 x=445533
+		//if 2 different objects of same class having same content and having hashcode() impl. then it will generate same hashcode e1=445533 e1duplicate=445533
      // if e1==e1duplicate is true then e1.equals(e1duplicate) is always true
 		// if e1==e1duplicate is false then e1.equals(e1duplicate) may true or false
 		  //if e1.equals(e1duplicate) is true then e1==e1duplicate may true or false
@@ -35,7 +35,7 @@ public class EqualsHashcode {
 		map.put(e1, 10);
 		map.put(e2, 41);
 		map.put(e3, 25);
-//		map.put(e1duplicate, 77);//if Employee class equals method not implemented  e1duplicate will added to hm
+		map.put(e1duplicate, 77);//if Employee class equals method not implemented  e1duplicate will added to hm
 		System.out.println(map);
 		System.out.println(map.get(new Employee(101, "raj")));
 		
@@ -58,6 +58,10 @@ public class EqualsHashcode {
 		name=ename;
 	}
 
+	@Override
+	public String toString() {
+		return (" id="+id+" name="+name+" & value");
+	};
 	@Override
 	public int hashCode() {
 		final int prime = 31;

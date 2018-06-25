@@ -10,9 +10,19 @@ public class StringCountRepeatedStringManipulation4 {
 	/**
 	 * @param args
 	 */
+    public static Map <String,Integer>hm=new HashMap<String,Integer>();
+	
 	public static void main(String[] args) {
-		Map <String,Integer>hm=new HashMap<String,Integer>();
-		String str="I am ok with this. I am not ok with that. are you ok ?";
+		
+		countDuplicateStrings("I am ok with this. I am not ok with that. are you ok ?");
+		// method to find duplicate characters in string
+		String name1= "succesfully saved engineering";
+		countDuplicateCharacters(name1);
+	}
+
+	
+	//method to find and count duplicate string
+	private static void countDuplicateStrings(String str) {
 		String sarray[]=str.split(" ");
 		for(String string:sarray)
 		{
@@ -36,16 +46,11 @@ public class StringCountRepeatedStringManipulation4 {
 			System.out.println(s+" is repeated "+i+" times");
 		}
 		
-		System.out.println("********************************");
-		
-		
-		// method to find duplicate characters in string
-		String name1= "succesfully saved engineering";
-		countDuplicateCharacters(name1);
 	}
 
-	
-	
+
+
+	//method to find duplicate character
 	private static void countDuplicateCharacters(String name1) {
 	
 		Map <Character,Integer>charhm=new HashMap<Character,Integer>();
@@ -55,10 +60,13 @@ public class StringCountRepeatedStringManipulation4 {
 		{
 			char ch=name1.charAt(i);
 			Integer num=charhm.get(ch);
+			//check whether key value is present in map
 			if(num!=null)
 					{
+				// if num is not null means some entry is present in hashmap so add num+1 and put it  in map. it will replace previus entry
 				charhm.put(ch,num+1);
 					}
+			//if num==null ie entry is not present then add new entry with initial value 1 in hashmap
 			else
 				charhm.put(ch,1);
 		}
