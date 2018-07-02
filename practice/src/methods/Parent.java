@@ -1,6 +1,6 @@
 package methods;
 
-public class Overriding {
+public class Parent {
  void add()
 {
 	System.out.println("add parent class");

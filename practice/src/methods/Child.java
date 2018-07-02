@@ -1,6 +1,6 @@
 package methods;
 
-public class Child extends Overriding{
+public class Child extends Parent{
 	@Override
 	final void add()
 	{
@@ -21,16 +21,18 @@ public class Child extends Overriding{
 		ch.add();*/
 		//Overriding.add();
 		
-		Overriding o=new Overriding();
-		Child c=new Child();
-		Overriding oo=new Child();
-		oo.m1();
+		Parent parent=new Parent();
+		Child child=new Child();
+		Parent pc=new Child();
 		
-	    c.m2();
-	    oo.add();
+		parent.m1();
 		
-		oo.draw();
-		//oo.draw();
+	    child.m2();
+	    child.add();
+	    
+	    pc.m1();
+		pc.draw();
+		
 		
 	}
 
