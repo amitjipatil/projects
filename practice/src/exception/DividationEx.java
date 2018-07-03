@@ -8,7 +8,7 @@ public class DividationEx {
 	{
 		int a=10;
 		int b=0;
-		int c=0;		
+		int c;		
 	
 		try{
 		c=a/b;
@@ -19,16 +19,16 @@ public class DividationEx {
 		catch(Exception e)
 		{
 			String s=e.getMessage();
-			System.out.println(s);
+			//System.out.println(s);
 			System.out.println("in catch bolck");
-		  e.printStackTrace();
+		 // e.printStackTrace();
 		  System.out.println(" after printstack");
 		  return 3;
 		}
 		finally
 		{
 			System.out.println("finally executed");
-			return 2;
+		//	return 2;
 		}
 		
 		/*catch(ArithmeticException ae)
