@@ -1,7 +1,7 @@
 package multithreading;
 
 
-/*1.Synchronization in java guarantees that no two threads can execute a synchronized method which requires same lock simultaneously or concurrently.
+/* 1.Synchronization in java guarantees that no two threads can execute a synchronized method which requires same lock simultaneously or concurrently.
 2.synchronized keyword can be used only with methods and code blocks. These methods or blocks can be static or non-static both.
 3.When ever a thread enters into java synchronized method or block it acquires a lock and whenever it leaves java synchronized method or block it releases the lock. Lock is released even if thread leaves synchronized method after completion or due to any Error or Exception.
 4.java synchronized keyword is re-entrant in nature it means if a java synchronized method calls another synchronized method which requires same lock then current thread which is holding lock can enter into that method without acquiring lock.
