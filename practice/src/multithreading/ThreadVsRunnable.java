@@ -62,9 +62,9 @@ class ImplementsRunnable implements Runnable {
 	 }
 	 
 	 
- /*  ImplementsRunnable : Counter : 1
-	 ImplementsRunnable : Counter : 2
+ /* output ImplementsRunnable : Counter : 1
+	 ImplementsRunnable : Counter : 2 
 	 ImplementsRunnable : Counter : 3
 	 ExtendsThread : Counter : 1
 	 ExtendsThread : Counter : 1
-	 ExtendsThread : Counter : 1*/
+	 ExtendsThread : Counter : 1   */
