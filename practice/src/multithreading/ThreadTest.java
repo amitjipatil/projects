@@ -13,14 +13,16 @@ package multithreading;
 */
 public class ThreadTest {
 	public static void main(String[] args) {
-		MyThreading t=new MyThreading();
+		Display d=new Display();
+		Display d1=new Display();
+		MyThreading t=new MyThreading(d,"Amit");
 		t.setName("Pune");
 	//	System.out.println(currentThread());
 		t.start();	
 		
 		System.out.println("statement written after t.start()");// all the statements of main() will execute before t.start();
 		
-		MyThreading thread=new MyThreading();
+		MyThreading thread=new MyThreading(d1,"Sunil");
 		thread.setName("mumbai");
 		//System.out.println(t.getPriority());
 		thread.start();	

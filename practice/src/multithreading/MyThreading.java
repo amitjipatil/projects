@@ -1,23 +1,28 @@
 package multithreading;
 
 public class MyThreading extends Thread{
+	
+	Display d;
+	String name;
+	public MyThreading(Display d,String name) {
+		this.d=d;
+		this.name=name;
+	}
+	
 	@Override
 	public  void run() {
 	
-		test();
-	
-	
-	}
-	private static synchronized void test() {
-		for(int i=0;i<5;i++)
-		{
-			System.out.println(currentThread().getName()+" run()");
-		}
+		try {
+			d.test(name);
+		} catch (Exception e) {
 			
+			e.printStackTrace();
+		}
+	
+	
 	}
-	
-	
-	void run(int c)
+			
+		void run(int c)
 	{
 		System.out.println("cccc");
 		//Thread.yield();
@@ -29,3 +34,5 @@ public class MyThreading extends Thread{
 	}*/
 
 }
+
+
